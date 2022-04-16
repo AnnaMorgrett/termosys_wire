@@ -50,6 +50,12 @@ class TableController extends Controller
         //
     }
 
+    public function listTable(Table $table)
+    {
+        $tables = Table::all();
+        return view('listTable', compact('tables'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
