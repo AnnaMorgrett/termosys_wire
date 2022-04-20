@@ -22,6 +22,9 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
-Route::get('/getTables', 'App\Http\Controllers\TableController@listTable');
+Route::get('/getTables', 'App\Http\Controllers\TableController@listTable',  function () {
+    return view('listTable');
+})->middleware(['auth'])->name('listTable');
+require __DIR__ . '/auth.php';
