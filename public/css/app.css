@@ -595,6 +595,17 @@ select {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 .fixed {
   position: fixed;
 }
@@ -900,6 +911,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(238 242 255 / var(--tw-bg-opacity));
 }
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
 .fill-current {
   fill: currentColor;
 }
@@ -945,6 +960,10 @@ select {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -971,6 +990,9 @@ select {
 }
 .pr-4 {
   padding-right: 1rem;
+}
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
@@ -1286,6 +1308,11 @@ select {
   .dark\:bg-gray-800 {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
   }
 
   .dark\:text-gray-500 {
