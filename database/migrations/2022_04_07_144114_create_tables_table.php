@@ -19,9 +19,9 @@ return new class extends Migration
             $table->float('temp_1');
             $table->float('temp_2');
             $table->float('temp_3');
-            $table->float('distance_feeder');
-            $table->float('distance_water');
-            $table->integer('water_discharge');
+            $table->float('feeder_distance');
+            $table->float('water_distance');
+            $table->integer('water_flow');
             // $table->timestamp('time_rtc', $precision = 0);
             $table->timestamps();
         });

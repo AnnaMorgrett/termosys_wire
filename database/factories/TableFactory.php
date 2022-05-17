@@ -21,11 +21,9 @@ class TableFactory extends Factory
             'temp_1' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 24, $max = 30),
             'temp_2' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 24, $max = 30),
             'temp_3' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 24, $max = 30),
-            'distance_feeder' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 1024),
-            'distance_water' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 1024),
-            'water_discharge' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
-            'water_discharge' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
-            'water_discharge' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
+            'feeder_distance' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 1024),
+            'water_distance' => $this->faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 1024),
+            'water_flow' => $this->faker->randomNumber($nbDigits = 2, $strict = false),
             // 'time_rtc' => $this->faker->dateTime($max = 'now', $timezone = null),        
         ];
     }
