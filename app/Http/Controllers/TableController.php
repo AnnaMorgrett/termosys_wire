@@ -52,7 +52,7 @@ class TableController extends Controller
 
     public function listTable(Table $table)
     {
-        $tables = Table::all();
+        $tables = Table::paginate(10);
         return view('listTable', compact('tables'));
     }
 
