@@ -12,7 +12,7 @@
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg dark:border-gray-200">
 
                         <form method="GET">
-                            <div class="flex justify-center">
+                            <div class="flex justify-end">
                                 <div class="mb-3 xl:w-96">
                                   <div class="input-group relative flex flex-wrap items-stretch w-full mb-4 rounded">
                                     <input type="cari" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="cari" aria-label="cari" aria-describedby="button-addon2">
