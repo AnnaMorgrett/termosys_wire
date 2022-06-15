@@ -24,7 +24,12 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-Route::get('/getTables', 'App\Http\Controllers\TableController@listTable',  function () {
+Route::get('/table', 'App\Http\Controllers\TableController@index',  function () {
+    return view('listTable');
+})->middleware(['auth'])->name('listTable');
+require __DIR__ . '/auth.php';
+
+Route::get('/table/cari','PegawaiController@cari',  function () {
     return view('listTable');
 })->middleware(['auth'])->name('listTable');
 require __DIR__ . '/auth.php';

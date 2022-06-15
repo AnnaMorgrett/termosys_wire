@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTableRequest;
 use App\Http\Requests\UpdateTableRequest;
 use App\Models\Table;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request as HttpRequest;
 
 class TableController extends Controller
 {
@@ -15,8 +17,36 @@ class TableController extends Controller
      */
     public function index()
     {
-        //
-    }
+        // $cari = $request->query('cari');
+
+        // if (!empty($cari)) {
+        //     $tables = Table::sortable()
+        //         ->where('id', 'like', '%' . $cari . '%')
+        //         ->orWhere('ph_1', 'like', '%' . $cari . '%')
+                // ->orWhere('temp_1', 'like', '%' . $cari . '%')
+                // ->orWhere('temp_2', 'like', '%' . $cari . '%')
+                // ->orWhere('temp_3', 'like', '%' . $cari . '%')
+                // ->orWhere('feeder_distance', 'like', '%' . $cari . '%')
+                // ->orWhere('water_distance', 'like', '%' . $cari . '%')
+                // ->orWhere('water_flow', 'like', '%' . $cari . '%')
+        //         ->paginate(10)->onEachSide(2)->fragment('datakolam');
+        // } else {
+        //     $tables = Table::sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
+        // }
+
+        // return view('listTable')->with([
+        //     'Table' => $tables,
+        //     'cari' => $cari,
+        // ]);
+
+        
+    		// mengambil data dari table pegawai
+            $table = Table::sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
+ 
+    		// mengirim data pegawai ke view index
+		return view('listTable',['table' => $table]);
+ 
+	}
 
     /**
      * Show the form for creating a new resource.
@@ -52,8 +82,13 @@ class TableController extends Controller
 
     public function listTable(Table $table)
     {
-        $tables = Table::paginate(10);
-        return view('listTable', compact('tables'));
+
+
+
+
+
+        // $tables = Table::sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
+        // return view('listTable', compact('tables'));
     }
 
     /**
