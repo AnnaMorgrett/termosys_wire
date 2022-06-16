@@ -31,5 +31,5 @@ require __DIR__ . '/auth.php';
 
 Route::get('/table/cari','App\Http\Controllers\TableController@cari',  function () {
     return view('listTable');
-})->middleware(['auth'])->name('listTable');
+})->middleware(['auth'])->name('cari');
 require __DIR__ . '/auth.php';
