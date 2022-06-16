@@ -78,8 +78,6 @@ class TableController extends Controller
 
 
 
-        // $tables = Table::sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
-        // return view('listTable', compact('tables'));
     }
 
     /**
