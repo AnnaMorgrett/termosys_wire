@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
+            {{ __('Log Data Kolam 1') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -55,8 +55,7 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table class="mb-4">
-                        {{-- {{$tables->links() }} --}}
+                        </table>
                         {!! $table->appends(\Request::except('page'))->render() !!}
                     </div>
 
