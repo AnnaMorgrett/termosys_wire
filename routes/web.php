@@ -29,7 +29,7 @@ Route::get('/table', 'App\Http\Controllers\TableController@index',  function () 
 })->middleware(['auth'])->name('listTable');
 require __DIR__ . '/auth.php';
 
-Route::get('/table/cari','PegawaiController@cari',  function () {
+Route::get('/table/cari','App\Http\Controllers\TableController@cari',  function () {
     return view('listTable');
 })->middleware(['auth'])->name('listTable');
 require __DIR__ . '/auth.php';
