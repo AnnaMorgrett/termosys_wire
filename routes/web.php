@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LinechartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('line-chart', [LinechartController::class,'linechart']);
+Route::get('/line-chart', 'App\Http\Controllers\LinechartController@linechart');
 
 
 Route::get('/dashboard', function () {
