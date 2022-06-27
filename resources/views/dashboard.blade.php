@@ -1,3 +1,4 @@
+
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
    google.charts.load('current', {'packages':['gauge']});
@@ -7,19 +8,20 @@
 
      var data = google.visualization.arrayToDataTable([
        ['Label', 'Value'],
-       ['Memory', 24],
-       ['CPU', 25],
-       ['Network', 26]
+       
+       ['Temperature', 27],
+       ['Temperature', 25],
+       ['Temperature', 26]
      ]);
 
      var options = {
        width: 800, height: 400,
        redFrom: 29, redTo: 30,
-       yellowFrom:26, yellowTo: 28,
+       yellowFrom:27, yellowTo: 29,
                 min: 18,
                 max: 30,
 
-       minorTicks: 5
+       minorTicks: 10
      };
 
      var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
