@@ -31,7 +31,7 @@
     Highcharts.chart('line-chart', {
 
         title: {
-            text: 'Students Term Wise Marks'
+            text: 'Charts Term Wise Marks'
         },
 
         yAxis: {
