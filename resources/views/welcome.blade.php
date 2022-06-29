@@ -19,8 +19,8 @@
         </div>
         <ul class="font-montserrat items-center hidden md:flex">
             <li class="mx-3 ">
-                <a class="growing-underline" href="#howdoesitworks">
-                    How Does It Works?
+                <a class="growing-underline" href="#howitworks">
+                    How It Works?
                 </a>
             </li>
             <li class="growing-underline mx-3">
@@ -62,7 +62,7 @@
         </div>
         <ul class="font-montserrat flex flex-col mx-8 my-24 items-center text-3xl">
             <li class="my-6">
-                <a href="#howdoesitworks">How Does It Works?</a>
+                <a href="#howitworks">How It Works?</a>
             </li>
             <li class="my-6">
                 <a href="#whyiot">Why IoT?</a>
@@ -87,7 +87,19 @@
                 Simplify your work with the TerMoSys Automation (Integrated Monitoring System)
                 which is connected to IoT and wireless sensor network.
             </p>
+            <div class="flex justify-center items-center">
+                <button
+                    class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">
+                    Login
+                </button>
+
+                <button
+                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">
+                    Register
+                </button>
+            </div>
         </div>
+
         <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
             <div class="relative">
                 <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
@@ -97,12 +109,13 @@
                 <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-6" />
             </div>
         </div>
+        
     </section>
 
-    <!-- How Does It Works -->
-    <section id="howdoesitworks" class="bg-black text-white sectionSize">
+    <!-- How It Works -->
+    <section id="howitworks" class="bg-black text-white sectionSize">
         <div>
-            <h2 class="secondaryTitle bg-underline2 bg-100% mt-8">How Does It Works?</h2>
+            <h2 class="secondaryTitle bg-underline2 bg-100% mt-8">How It Works?</h2>
         </div>
         <div class="flex flex-col md:flex-row">
             <div class="flex-1 mx-8 flex flex-col items-center my-4">
