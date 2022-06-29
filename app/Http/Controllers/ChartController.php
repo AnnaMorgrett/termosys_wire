@@ -26,7 +26,7 @@ class ChartController extends Controller
             );
         }
 
-        return view("line-chart", [
+        return view("dashboard", [
             "data" => json_encode($dataPoints),
             "terms" => json_encode(array(
                 "Temp 1",

@@ -1,48 +1,6 @@
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-   google.charts.load('current', {'packages':['gauge']});
-   google.charts.setOnLoadCallback(drawChart);
-
-   function drawChart() {
-
-     var data = google.visualization.arrayToDataTable([
-       ['Label', 'Value'],
-       
-       ['Temperature', 27],
-       ['Temperature', 25],
-       ['Temperature', 26]
-     ]);
-
-     var options = {
-       width: 800, height: 400,
-       redFrom: 29, redTo: 30,
-       yellowFrom:27, yellowTo: 29,
-                min: 18,
-                max: 30,
-
-       minorTicks: 10
-     };
-
-     var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
-
-     chart.draw(data, options);
-
-     setInterval(function() {
-    //    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-       chart.draw(data, options);
-     }, 13000);
-     setInterval(function() {
-    //    data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-       chart.draw(data, options);
-     }, 5000);
-     setInterval(function() {
-    //    data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-       chart.draw(data, options);
-     }, 26000);
-   }
- </script>
-
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> --}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
 
 <x-app-layout>
     <x-slot name="header">
@@ -55,9 +13,64 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div id="chart_div"></div>
+
+                          <div id="line-chart"></div>
+
                 </div>
             </div>
         </div>
     </div>
 </x-app-layout>
+
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script>
+  $(function(){
+    Highcharts.chart('line-chart', {
+
+        title: {
+            text: 'Charts Term Wise Marks'
+        },
+
+        yAxis: {
+            title: {
+                text: 'Number of Marks'
+            }
+        },
+
+        xAxis: {
+        categories: <?= $terms ?>
+    },
+
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+        },
+
+        series: <?= $data ?>,
+
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },
+                chartOptions: {
+                    legend: {
+                        layout: 'horizontal',
+                        align: 'center',
+                        verticalAlign: 'bottom'
+                    }
+                }
+            }]
+        }
+
+        });
+  });
+</script>
