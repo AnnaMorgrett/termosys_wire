@@ -42,6 +42,9 @@
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('water_flow', 'Arus Air')
                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        @sortablelink('created_at', 'Timestamps')
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,6 +55,7 @@
                                         <td class="px-6 py-4"> {{ $value->ph_1 }} </td>
                                         <td class="px-6 py-4"> {{ $value->water_distance }} </td>
                                         <td class="px-6 py-4"> {{ $value->water_flow }} </td>
+                                        <td class="px-6 py-4"> {{ $value->created_at }} </td>
                                     </tr>
                                 @endforeach
                             </tbody>
