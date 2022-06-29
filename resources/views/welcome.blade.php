@@ -87,8 +87,30 @@
                 Simplify your work with the TerMoSys Automation (Integrated Monitoring System)
                 which is connected to IoT and wireless sensor network.
             </p>
+
+
+
             <div class="flex justify-center items-center">
-                <button
+
+                @if (Route::has('login'))
+                    <div class="font-montserrat hidden md:block">
+                        @auth
+                            <a href="{{ url('/dashboard') }}"
+                                class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}"
+                                class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">Log
+                                in</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"
+                                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+
+                {{-- <button
                     class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">
                     Login
                 </button>
@@ -96,7 +118,7 @@
                 <button
                     class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">
                     Register
-                </button>
+                </button> --}}
             </div>
         </div>
 
@@ -109,7 +131,7 @@
                 <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-6" />
             </div>
         </div>
-        
+
     </section>
 
     <!-- How It Works -->
