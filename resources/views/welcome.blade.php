@@ -92,23 +92,23 @@
 
             <div class="flex justify-center items-center">
 
-                @if (Route::has('login'))
+                {{-- @if (Route::has('login'))
                     <div class="font-montserrat hidden md:block">
                         @auth
-                            <a href="{{ url('/dashboard') }}"
-                                class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Dashboard</a>
+                            <button href="{{ url('/dashboard') }}"
+                                class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Dashboard</button>
                         @else
-                            <a href="{{ route('login') }}"
+                            <button href="{{ route('login') }}"
                                 class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">Log
-                                in</a>
+                                in</button>
 
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}"
-                                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Register</a>
+                                <button href="{{ route('register') }}"
+                                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Register</button>
                             @endif
                         @endauth
                     </div>
-                @endif
+                @endif --}}
 
                 {{-- <button
                     class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">

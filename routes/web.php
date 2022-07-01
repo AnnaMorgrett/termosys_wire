@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('dashboard', [ChartController::class, 'index']);
-
 Route::get('/dashboard', 'App\Http\Controllers\ChartController@index',function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
