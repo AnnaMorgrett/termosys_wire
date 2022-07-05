@@ -110,7 +110,7 @@
                     </div>
                 @endif --}}
 
-                {{-- <button
+                <button
                     class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">
                     Login
                 </button>
@@ -118,7 +118,7 @@
                 <button
                     class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">
                     Register
-                </button> --}}
+                </button>
             </div>
         </div>
 
