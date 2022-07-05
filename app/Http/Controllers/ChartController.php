@@ -18,6 +18,7 @@ class ChartController extends Controller
         $dataPoints5 = [];
         $dataPoints6 = [];
         $dataPoints7 = [];
+        $dataPoints8 = [];
 
         foreach ($charts as $chart) {
 
@@ -66,6 +67,12 @@ class ChartController extends Controller
             );
         }
 
+        foreach ($charts as $chart) {
+            $dataPoints8[] = array(
+                    $chart['created_at'],
+            );
+        }
+
         return view("dashboard", [
             "temp_1" => json_encode($dataPoints1),
             "temp_2" => json_encode($dataPoints2),
@@ -74,6 +81,7 @@ class ChartController extends Controller
             "feeder_distance" => json_encode($dataPoints5),
             "water_distance" => json_encode($dataPoints6),
             "water_flow" => json_encode($dataPoints7),
+            "created_at" => json_encode($dataPoints8),
 
             // dd($dataPoints)
         ]);

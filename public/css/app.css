@@ -1028,6 +1028,9 @@ select {
 .overflow-x-auto {
   overflow-x: auto;
 }
+.break-all {
+  word-break: break-all;
+}
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -1753,6 +1756,11 @@ select {
   .dark\:hover\:bg-blue-700:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+  }
+
+  .dark\:hover\:text-gray-400:hover {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
   .dark\:focus\:border-gray-700:focus {

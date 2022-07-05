@@ -1,6 +1,10 @@
-{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> --}}
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/series-label.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-{{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
 
 <x-app-layout>
     <x-slot name="header">
@@ -14,9 +18,9 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
-                    {{-- <?= $data ?> --}}
-
-                          <div id="line-chart"></div>
+                    {{-- <?= $created_at ?> --}}
+                    
+                    <div id="line-chart"></div>
 
                 </div>
             </div>
@@ -24,90 +28,85 @@
     </div>
 </x-app-layout>
 
-
-
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/series-label.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
 <script>
-  $(function(){
-    Highcharts.chart('line-chart', {
+    $(function() {
+        Highcharts.chart('line-chart', {
 
-        title: {
-        text: 'Monitoring Kolam Pendederan Ikan Koi Berbasis Website'
-    },
-
-    subtitle: {
-        text: 'Sumber: Dinas Peternakan dan Perikanan Kab. Magetan'
-    },
-
-    yAxis: {
-        title: {
-            text: 'Nilai'
-        }
-    },
-
-    xAxis: {
-        accessibility: {
-            rangeDescription: 'Data Rekam'
-        }
-    },
-
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            label: {
-                connectorAllowed: false
+            title: {
+                text: 'Monitoring Kolam Pendederan Ikan Koi Berbasis Website'
             },
-            // pointStart: 2010
-        }
-    },
 
-    series: [{
-        name: 'Temperatur Kolam 1',
-        data: <?= $temp_1 ?>
-    }, {
-        name: 'Temperatur Kolam 2',
-        data: <?= $temp_2 ?>
-    }, {
-        name: 'Temperatur Kolam 3',
-        data: <?= $temp_3 ?>
-    }, {
-        name: 'Kadar pH Kolam 1',
-        data: <?= $ph_1 ?>
-    }, {
-        name: 'Ketinggian Pakan',
-        data: <?= $feeder_distance ?>
-    }, {
-        name: 'Ketinggian Air',
-        data: <?= $water_distance ?>
-    }, {
-        name: 'Arus Air',
-        data: <?= $water_flow ?>
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
+            subtitle: {
+                text: 'Sumber: Dinas Peternakan dan Perikanan Kab. Magetan'
             },
-            chartOptions: {
-                legend: {
-                    layout: 'horizontal',
-                    align: 'center',
-                    verticalAlign: 'bottom'
+
+            yAxis: {
+                title: {
+                    text: 'Nilai'
                 }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Data Rekam'
+                },
+                //  {
+                //     categories: <?= $created_at ?>
+                // },
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    // pointStart: 2010
+                }
+            },
+
+            series: [{
+                name: 'Temperatur Kolam 1',
+                data: <?= $temp_1 ?>
+            }, {
+                name: 'Temperatur Kolam 2',
+                data: <?= $temp_2 ?>
+            }, {
+                name: 'Temperatur Kolam 3',
+                data: <?= $temp_3 ?>
+            }, {
+                name: 'Kadar pH Kolam 1',
+                data: <?= $ph_1 ?>
+            }, {
+                name: 'Ketinggian Pakan',
+                data: <?= $feeder_distance ?>
+            }, {
+                name: 'Ketinggian Air',
+                data: <?= $water_distance ?>
+            }, {
+                name: 'Arus Air',
+                data: <?= $water_flow ?>
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
             }
-        }]
-    }
         });
-  });
+    });
 </script>
