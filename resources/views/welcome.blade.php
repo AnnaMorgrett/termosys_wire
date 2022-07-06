@@ -29,6 +29,21 @@
             <li class="growing-underline mx-3">
                 <a href="#about">About</a>
             </li>
+
+            {{-- @if (Route::has('login'))
+            <div class="font-montserrat hidden md:block">
+                @auth
+                    <a href="{{ url('/dashboard') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Dashboard</a>
+                @else
+                    <a href="{{ route('login') }}" class="mr-6">Log in</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Register</a>
+                    @endif
+                @endauth
+            </div>
+        @endif --}}
+
         </ul>
 
         @if (Route::has('login'))
@@ -92,33 +107,19 @@
 
             <div class="flex justify-center items-center">
 
-                {{-- @if (Route::has('login'))
-                    <div class="font-montserrat hidden md:block">
-                        @auth
-                            <button href="{{ url('/dashboard') }}"
-                                class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Dashboard</button>
-                        @else
-                            <button href="{{ route('login') }}"
-                                class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">Log
-                                in</button>
-
-                            @if (Route::has('register'))
-                                <button href="{{ route('register') }}"
-                                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">Register</button>
-                            @endif
-                        @endauth
-                    </div>
-                @endif --}}
-
-                <button
-                    class="mr-2 px-4 py-2 border border-gray-800 bg-transparent  text-black hover:text-white hover:bg-black text-sm font-medium rounded-md">
-                    Login
-                </button>
-
-                <button
-                    class="ml-2 px-4 py-2 border border-gray-800 bg-black text-white   hover:text-black hover:bg-white text-sm font-medium rounded-md">
-                    Register
-                </button>
+                @if (Route::has('login'))
+                <div class="sm:font-montserrat md:hidden  lg:hidden xl:hidden 2xl:hidden">
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="mr-6">Log in</a>
+    
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
             </div>
         </div>
 
@@ -258,10 +259,15 @@
         <div>
             <h2 class="secondaryTitle bg-underline4 mb-0 bg-100% mt-20">About</h2>
         </div>
+        <div class="text-center mt-4">
+            <p>
+                A joint Final Project developed by : 
+            </p>
+        </div>
         <div class="flex w-full flex-col md:flex-row">
 
             <div
-                class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
+                class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
                 <h3 class="font-pt-serif font-normal text-2xl mb-4">
                     The Good
                 </h3>
@@ -289,7 +295,7 @@
             </div>
 
             <div
-                class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
+                class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
                 <h3 class="font-pt-serif font-normal text-2xl mb-4">
                     The Bad
                 </h3>
@@ -317,7 +323,7 @@
             </div>
 
             <div
-                class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
+                class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
                 <h3 class="font-pt-serif font-normal text-2xl mb-4">
                     The Ugly
                 </h3>
@@ -343,6 +349,35 @@
                     Choose plan
                 </button>
             </div>
+
+            <div
+                class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
+                <h3 class="font-pt-serif font-normal text-2xl mb-4">
+                    The Bad
+                </h3>
+                <div class="font-montserrat font-bold text-2xl mb-4">
+                    $40
+                    <span class="font-normal text-base"> / month</span>
+                </div>
+
+                <div class="flex">
+                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+                    <p>Benefit #1</p>
+                </div>
+                <div class="flex">
+                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+                    <p>Benefit #2</p>
+                </div>
+                <div class="flex">
+                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
+                    <p>Benefit #3</p>
+                </div>
+
+                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
+                    Choose plan
+                </button>
+            </div>
+
 
         </div>
     </section>
