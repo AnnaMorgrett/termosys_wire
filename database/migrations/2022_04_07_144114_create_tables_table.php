@@ -21,7 +21,7 @@ return new class extends Migration
             $table->float('temp_3');
             $table->float('feeder_distance');
             $table->float('water_distance');
-            $table->integer('water_flow');
+            $table->float('water_flow');
             // $table->timestamp('time_rtc', $precision = 0);
             $table->timestamps();
         });

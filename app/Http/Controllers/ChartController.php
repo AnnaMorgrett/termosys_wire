@@ -63,7 +63,7 @@ class ChartController extends Controller
 
         foreach ($charts as $chart) {
             $dataPoints7[] = array(
-                    intval($chart['flow']),
+                    intval($chart['water_flow']),
             );
         }
 
@@ -82,7 +82,6 @@ class ChartController extends Controller
             "water_distance" => json_encode($dataPoints6),
             "water_flow" => json_encode($dataPoints7),
             "created_at" => json_encode($dataPoints8),
-
             // dd($dataPoints)
         ]);
     }
