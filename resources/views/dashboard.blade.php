@@ -71,25 +71,25 @@
             },
 
             series: [{
-                name: 'Temperatur Kolam 1',
+                name: 'Temperatur Kolam 1 ( °C)',
                 data: <?= $temp_1 ?>
             }, {
-                name: 'Temperatur Kolam 2',
+                name: 'Temperatur Kolam 2 ( °C)',
                 data: <?= $temp_2 ?>
             }, {
-                name: 'Temperatur Kolam 3',
+                name: 'Temperatur Kolam 3 ( °C)',
                 data: <?= $temp_3 ?>
             }, {
-                name: 'Kadar pH Kolam 1',
+                name: 'Kadar pH Kolam 1 ( pH)',
                 data: <?= $ph_1 ?>
             }, {
-                name: 'Ketinggian Pakan',
+                name: 'Ketinggian Pakan ( cm)',
                 data: <?= $feeder_distance ?>
             }, {
-                name: 'Ketinggian Air',
+                name: 'Ketinggian Air ( cm)',
                 data: <?= $water_distance ?>
             }, {
-                name: 'Arus Air',
+                name: 'Arus Air (l/min)',
                 data: <?= $water_flow ?>
             }],
 

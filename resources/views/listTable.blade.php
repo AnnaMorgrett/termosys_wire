@@ -27,20 +27,20 @@
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('id', 'Data Ke')
+                                        @sortablelink('id', '#')
 
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('temp_1', 'Suhu Air')
+                                        @sortablelink('temp_1', 'Suhu Air ( °C)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('ph_1', 'pH Air')
+                                        @sortablelink('ph_1', 'pH Air ( pH)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('water_distance', 'Ketinggian Air')
+                                        @sortablelink('water_distance', 'Ketinggian Air ( cm)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('water_flow', 'Arus Air')
+                                        @sortablelink('water_flow', 'Arus Air (l/min)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('created_at', 'Timestamps')
