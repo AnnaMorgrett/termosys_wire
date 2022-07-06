@@ -93,33 +93,36 @@
         class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
         <div class="md:flex-1 md:mr-10">
             <h1 class="font-pt-serif text-5xl font-bold mb-7">
-                A Design Makes
-                <span class="bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
-                    Work Easy
+                Intergrated Monitoring System
+                <span class="mt-2 bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
+                    (TerMoSys)
                 </span>
             </h1>
-            <p class="font-pt-serif font-normal mb-7">
-                Simplify your work with the TerMoSys Automation (Integrated Monitoring System)
-                which is connected to IoT and wireless sensor network.
+            <p class="font-pt-serif font-normal">
+                Simplify your work with the TerMoSys Automation.
             </p>
-
-
+            <p class="font-pt-serif font-normal mb-7">
+                A collaboration between Madiun State Polytechnic
+                students and the Magetan Regency Fish Seed Center.
+            </p>
 
             <div class="flex justify-center items-center">
 
                 @if (Route::has('login'))
-                <div class="sm:font-montserrat md:hidden  lg:hidden xl:hidden 2xl:hidden">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="mr-6">Log in</a>
-    
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="py-2 px-4 text-white bg-black rounded-3xl">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                    <div class="sm:font-montserrat md:hidden  lg:hidden xl:hidden 2xl:hidden">
+                        @auth
+                            <a href="{{ url('/dashboard') }}"
+                                class="py-2 px-4 text-white bg-black rounded-3xl">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="mr-6">Log in</a>
+
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}"
+                                    class="py-2 px-4 text-white bg-black rounded-3xl">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
             </div>
         </div>
 
@@ -127,7 +130,7 @@
             <div class="relative">
                 <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
             </div>
-            <img src='dist/assets/MacBook Pro.png' alt="Macbook" />
+            <img src='dist/assets/bbimagetan.jpg' alt="Ikan Koi" class="rounded-lg shadow-lg shadow-blue-500/50 mb-4" />
             <div class="relative">
                 <img src='dist/assets/Highlight2.svg' alt="" class="absolute -bottom-10 -right-6" />
             </div>
@@ -261,180 +264,105 @@
         </div>
         <div class="text-center mt-4">
             <p>
-                A joint Final Project developed by : 
+                A joint Final Project developed by :
             </p>
         </div>
         <div class="flex w-full flex-col md:flex-row">
 
             <div
                 class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Good
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $25
-                    <span class="font-normal text-base"> / month</span>
+                <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
+                    <div class="relative">
+                        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
+                    </div>
+                    <img src='dist/assets/Aidhul.jpg' alt="Aidhul Rachmad R."
+                        class="rounded-lg shadow-lg shadow-blue-500/50 max-w-full h-auto" />
                 </div>
 
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
+                    <p>Aidhul Rachmad R.</p>
                 </div>
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
+                    <p>Wireless Sensor Network</p>
                 </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
-                </div>
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
             </div>
 
             <div
                 class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Bad
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $40
-                    <span class="font-normal text-base"> / month</span>
+                <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
+                    <div class="relative">
+                        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
+                    </div>
+                    <img src='dist/assets/Irza.jpg' alt="Irza Aditya Mahendra"
+                        class="rounded-lg shadow-lg shadow-blue-500/50 max-w-full h-auto" />
                 </div>
 
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
+                    <p>Irza Aditya M.</p>
                 </div>
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
+                    <p>Fish Pond Monitoring System</p>
                 </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
-                </div>
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
             </div>
 
             <div
                 class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Ugly
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $50
-                    <span class="font-normal text-base"> / month</span>
+                {{-- <h3 class="font-pt-serif font-normal text-2xl mb-4 z-40">
+                    Aidhul R. R.
+                </h3> --}}
+                <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
+                    <div class="relative">
+                        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
+                    </div>
+                    <img src='dist/assets/Meiliya.jpg' alt="Meiliya Triyastanti"
+                        class="rounded-lg shadow-lg shadow-blue-500/50 max-w-full h-auto" />
                 </div>
 
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
+                    <p>Meiliya Triyastanti</p>
                 </div>
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
+                    <p>Fish Pond Control System</p>
                 </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
-                </div>
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
             </div>
 
             <div
                 class='flex-1 flex flex-col mx-3 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Bad
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $40
-                    <span class="font-normal text-base"> / month</span>
+                <div class="flex justify-around md:block mt-8 md:mt-0 md:flex-1">
+                    <div class="relative">
+                        <img src='dist/assets/Highlight1.svg' alt="" class="absolute -top-16 -left-10" />
+                    </div>
+                    <img src='dist/assets/Viki.jpg' alt="Viki Dwi Efendi"
+                        class="rounded-lg shadow-lg shadow-blue-500/50 max-w-full h-auto" />
                 </div>
 
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
+                    <p>Viki Dwi Efendi</p>
                 </div>
                 <div class="flex">
                     <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
-                </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
+                    <p>Automatic Fish Feeding System</p>
                 </div>
 
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
+
             </div>
 
 
         </div>
     </section>
 
-    <!-- FAQ  -->
-    <section class="sectionSize items-start pt-8 md:pt-36 bg-black text-white">
-        <div>
-            <h2 class="secondaryTitle bg-highlight3 p-10 mb-0 bg-center bg-100%">
-                FAQ
-            </h2>
-        </div>
-
-        <div toggleElement class="w-full py-4">
-            <div class="flex justify-between items-center">
-                <div question class="font-montserrat font-medium mr-auto">
-                    Where can I get this HTML template?
-                </div>
-                <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
-            </div>
-            <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
-                You can download it on Gumroad.com
-            </div>
-        </div>
-        <hr class="w-full bg-white" />
-
-        <div toggleElement class="w-full py-4">
-            <div class="flex justify-between items-center">
-                <div question class="font-montserrat font-medium mr-auto">
-                    Is this HTML template free?
-                </div>
-                <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
-            </div>
-            <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
-                Yes! For you it is free.
-            </div>
-        </div>
-        <hr class="w-full bg-white" />
-
-        <div toggleElement class="w-full py-4">
-            <div class="flex justify-between items-center">
-                <div question class="font-montserrat font-medium mr-auto">
-                    Am I awesome?
-                </div>
-                <img src='dist/assets/logos/CaretRight.svg' alt="" class="transform transition-transform" />
-            </div>
-            <div answer class="font-montserrat text-sm font-extralight pb-8 hidden">
-                Yes! No doubt about it.
-            </div>
-        </div>
-        <hr class="w-full bg-white" />
-
-    </section>
 
     <!-- Footer -->
     <section class="bg-black sectionSize">
         <div class="mb-4">
-            <img src='dist/assets/Logo_white.svg' alt="Logo" class="h-4" />
+            <img src='dist/assets/Logo_white.svg' alt="Logo" class="h-4 mt-10" />
         </div>
         <div class="flex mb-8">
             <a href="#">
@@ -451,7 +379,7 @@
             </a>
         </div>
         <div class="text-white font-montserrat text-sm">
-            © 2021 STARTUP. All rights reserved
+            © 2022 TerMoSys. All rights reserved
         </div>
     </section>
 </body>
