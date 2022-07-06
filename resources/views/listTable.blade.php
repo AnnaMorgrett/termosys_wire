@@ -27,7 +27,7 @@
                                 class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('id', '#')
+                                        @sortablelink('id', 'Data Ke')
 
                                     </th>
                                     <th scope="col" class="px-6 py-3">
@@ -48,9 +48,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $nomor = 1 + (($table->currentPage()-1) * $table->perPage());
+                                @endphp
                                 @foreach ($table as $key => $value)
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <td class="px-6 py-4"> {{ $value->id }} </td>
+                                        <td class="px-6 py-4"> {{ $nomor++ }} </td>
                                         <td class="px-6 py-4"> {{ $value->temp_1 }} </td>
                                         <td class="px-6 py-4"> {{ $value->ph_1 }} </td>
                                         <td class="px-6 py-4"> {{ $value->water_distance }} </td>

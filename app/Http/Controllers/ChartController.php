@@ -9,7 +9,8 @@ class ChartController extends Controller
 {
     public function index()
     {
-        $charts = Table::all();
+        $querytable = Table::latest()->take(96)->get();
+        $charts = $querytable->reverse();
 
         $dataPoints1 = [];
         $dataPoints2 = [];

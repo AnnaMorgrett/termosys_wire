@@ -19,7 +19,7 @@ class TableController extends Controller
     public function index()
     {
         // mengambil data dari table pegawai
-        $table = Table::sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
+        $table = Table::latest()->take(96)->sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
 
         // mengirim data pegawai ke view index
         return view('listTable', ['table' => $table]);
