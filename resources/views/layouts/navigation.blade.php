@@ -11,24 +11,24 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="space-x-8 -my-px ml-6 flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable')" :active="request()->routeIs('listTable')">
-                        {{ __('Log Data Kolam 1') }}
+                        {{ __('Kolam 1') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable2')" :active="request()->routeIs('listTable2')">
-                        {{ __('Log Data Kolam 2') }}
+                        {{ __('Kolam 2') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable3')" :active="request()->routeIs('listTable3')">
-                        {{ __('Log Data Kolam 3') }}
+                        {{ __('Kolam 3') }}
                     </x-nav-link>
                 </div>
 
                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('listTable')" :active="request()->routeIs('listTable')">
-                        {{ __('Log Data Kolam 1') }}
+                        {{ __('Log Kolam 1') }}
                     </x-nav-link>
                 </div> --}}
             </div>
