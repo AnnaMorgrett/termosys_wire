@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Http\Request as HttpRequest;
 
-class TableController3 extends Controller
+class TableController1 extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class TableController3 extends Controller
         ->sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
 
         // mengirim data pegawai ke view index
-        return view('listTable3', ['table' => $table]);
+        return view('listTable1', ['table' => $table]);
     }
 
     // public function cari(Request $request)
@@ -38,6 +38,6 @@ class TableController3 extends Controller
     //         ->paginate(10)->onEachSide(2)->fragment('datakolam');
 
     //     // mengirim data pegawai ke view index
-    //     return view('listTable3', ['table' => $table]);
+    //     return view('listTable1', ['table' => $table]);
     // }
 }

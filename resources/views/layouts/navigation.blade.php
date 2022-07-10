@@ -15,14 +15,17 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('listTable')" :active="request()->routeIs('listTable')">
-                        {{ __('Kolam 1') }}
+                    <x-nav-link :href="route('listTableAll')" :active="request()->routeIs('listTableAll')">
+                        {{ __('Data Semua Kolam') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('listTable1')" :active="request()->routeIs('listTable1')">
+                        {{ __('Data Kolam 1') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable2')" :active="request()->routeIs('listTable2')">
-                        {{ __('Kolam 2') }}
+                        {{ __('Data Kolam 2') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable3')" :active="request()->routeIs('listTable3')">
-                        {{ __('Kolam 3') }}
+                        {{ __('Data Kolam 3') }}
                     </x-nav-link>
                 </div>
 

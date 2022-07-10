@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-white leading-tight">
-            {{ __('Kolam 1') }}
+            {{ __('Data Semua Kolam') }}
         </h2>
     </x-slot>
     <div class="py-12">
@@ -30,20 +30,29 @@
                                         @sortablelink('id', '#')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('temp_1', 'Suhu Air ( °C)')
+                                        @sortablelink('temp_2', 'Suhu Kolam 1 ( °C)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('ph_1', 'pH Air ( pH)')
+                                        @sortablelink('temp_2', 'Suhu Kolam 2 ( °C)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('water_distance', 'Ketinggian Air ( cm)')
+                                        @sortablelink('temp_2', 'Suhu Kolam 3 ( °C)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
-                                        @sortablelink('water_flow', 'Arus Air (l/min)')
+                                        @sortablelink('ph_1', 'pH Kolam 1 ( pH)')
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        @sortablelink('water_distance', 'Ketinggian Air Kolam 1 ( cm)')
+                                    </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        @sortablelink('water_flow', 'Arus Air Kolam 1 (l/min)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('feeder_distance', 'Ketinggian Pakan ( cm)')
                                     </th>
+                                    <th scope="col" class="px-6 py-3">
+                                        @sortablelink('id', 'Nomor Urut Data Ke-')
+                                    </th>                               
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('created_at', 'Timestamps')
                                     </th>
@@ -57,10 +66,13 @@
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <td class="px-6 py-4"> {{ $nomor++ }} </td>
                                         <td class="px-6 py-4"> {{ $value->temp_1 }} </td>
+                                        <td class="px-6 py-4"> {{ $value->temp_2 }} </td>
+                                        <td class="px-6 py-4"> {{ $value->temp_3 }} </td>
                                         <td class="px-6 py-4"> {{ $value->ph_1 }} </td>
                                         <td class="px-6 py-4"> {{ $value->water_distance }} </td>
                                         <td class="px-6 py-4"> {{ $value->water_flow }} </td>
                                         <td class="px-6 py-4"> {{ $value->feeder_distance }} </td>
+                                        <td class="px-6 py-4"> {{ $value->id }} </td>                 
                                         <td class="px-6 py-4"> {{ $value->created_at }} </td>
                                     </tr>
                                 @endforeach

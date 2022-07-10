@@ -21,7 +21,7 @@
                     {{-- <?= $created_at ?> --}}
                     
                     <div id="line-chart"></div>
-
+             
                 </div>
             </div>
         </div>
