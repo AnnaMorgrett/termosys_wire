@@ -27,17 +27,19 @@ class TableController3 extends Controller
         return view('listTable3', ['table' => $table]);
     }
 
-    // public function cari(Request $request)
-    // {
-    //     // menangkap data pencarian
-    //     $cari = $request->cari;
+    public function cari(Request $request)
+    {
+        // menangkap data pencarian
+        $cari = $request->cari;
 
-    //     // mengambil data dari table pegawai sesuai pencarian data
-    //     $table = Table::latest()->take(96)->sortable()
-    //         ->where('id', 'like', "%" . $cari . "%")
-    //         ->paginate(10)->onEachSide(2)->fragment('datakolam');
+        // mengambil data dari table pegawai sesuai pencarian data
+        $table = Table::latest()
+        // ->take(96)
+        ->sortable()
+            ->where('id', 'like', "%" . $cari . "%")
+            ->paginate(10)->onEachSide(2)->fragment('datakolam');
 
-    //     // mengirim data pegawai ke view index
-    //     return view('listTable3', ['table' => $table]);
-    // }
+        // mengirim data pegawai ke view index
+        return view('listTable3', ['table' => $table]);
+    }
 }
