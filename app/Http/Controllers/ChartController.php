@@ -9,7 +9,7 @@ class ChartController extends Controller
 {
     public function index()
     {
-        $querytable = Table::latest()->take(96)->get();
+        $querytable = Table::orderBy('id', 'desc')->take(96)->get();
         $charts = $querytable->reverse();
 
         $dataPoints1 = [];

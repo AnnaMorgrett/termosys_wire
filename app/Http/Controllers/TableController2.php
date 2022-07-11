@@ -18,7 +18,7 @@ class TableController2 extends Controller
     public function index()
     {
         // mengambil data dari table pegawai
-        $table = Table::latest()
+        $table = Table::orderBy('id', 'desc')
         // ->take(96)
         ->sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
 
@@ -32,7 +32,7 @@ class TableController2 extends Controller
         $cari = $request->cari;
 
         // mengambil data dari table pegawai sesuai pencarian data
-        $table = Table::latest()
+        $table = Table::orderBy('id', 'desc')
         // ->take(96)
         ->sortable()
             ->where('id', 'like', "%" . $cari . "%")
