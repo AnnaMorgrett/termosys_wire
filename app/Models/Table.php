@@ -12,7 +12,6 @@ class Table extends Model
     // use softDeletes;
     use Sortable;
 
-
     public $sortable = [
         'id', 'temp_1', 'ph_1', 'water_distance', 'water_flow',
         ];

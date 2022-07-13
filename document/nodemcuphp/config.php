@@ -1,19 +1,6 @@
 <?php
 
-/**
- *  Coders Indonesia - Belajar Arduino dan IoT mudah dan asyik
- * -------------------------------------------------------------
- *  Author : Coders Indonesia
- *  Instagram : @coders.id
- *  Youtube : coders indonesia
- *  License : Pribadi
- * -------------------------------------------------------------
- * 
- *  Harap cantumkan sumber jika mau menggunakan kode ini. Dengan
- *  begitu, temen-temen sudah belajar jadi orang baik. Minimal
- *  menghargai hasil orang lain. Silakan copas, bantu dengan mencantumkan
- *  saja source codenya. Subscribe channel youtube lebih baik
- */
+
 class Config_Nodemcu
 {
 
@@ -28,7 +15,7 @@ class Config_Nodemcu
 
 
     /**
-     * Coders Class CRUD Section
+     * Class CRUD Section
      * This section for CRUD Operation
      * Create - Read - Update - Delete
      */
@@ -57,7 +44,7 @@ class Config_Nodemcu
     }
 
     /**
-     * Coders Class Connection Section
+     * Class Connection Section
      * This section for RDBMS Operation Only
      * 
      */
@@ -91,7 +78,7 @@ class Config_Nodemcu
     }
 
     /**
-     * Coders Class Connection Section
+     * Class Connection Section
      * This section for RDBMS Operation Only
      * 
      */
