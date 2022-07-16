@@ -8,6 +8,12 @@ include_once 'config.php';
 // Buat Instance baru
 $app = new Config_Nodemcu();
 
+$tz = 'Asia/Jakarta';
+$timestamp = time();
+$dt = $dt = new DateTime("now", new DateTimeZone($tz)); //first argument "must" be a string
+$dt = $dt->setTimestamp($timestamp); //adjust the object to correct timestamp
+$dt = $dt->format("Y-m-d H:i:s");
+
 // Baca query dari alamat
 $app->query_string = $_SERVER['QUERY_STRING'];
 
@@ -31,7 +37,7 @@ if ($app->is_url_query('mode')) {
                 $swd = $app->get_url_query_value('vwd');
                 $swf = $app->get_url_query_value('vwf');
 
-                $app->create_data($sph, $stemps, $stempd, $stempt, $sfd, $swd, $swf);
+                $app->create_data($sph, $stemps, $stempd, $stempt, $sfd, $swd, $swf, $dt);
             } else {
                 $error = [
                     'vph'=>'required',

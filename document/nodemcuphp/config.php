@@ -1,6 +1,4 @@
 <?php
-
-
 class Config_Nodemcu
 {
 
@@ -25,9 +23,9 @@ class Config_Nodemcu
         echo $this->execute_query($sql_query, [], true);
     }
 
-    function create_data($sph, $stemps, $stempd, $stempt, $sfd, $swd, $swf)
+    function create_data($sph, $stemps, $stempd, $stempt, $sfd, $swd, $swf, $dt)
     {
-        $sql_query = "INSERT INTO tables (ph_1, temp_1, temp_2, temp_3, feeder_distance, water_distance, water_flow) VALUES ('".$sph."','".$stemps."','".$stempd."','".$stempt."','".$sfd."','".$swd."','".$swf."')";
+        $sql_query = "INSERT INTO tables (ph_1, temp_1, temp_2, temp_3, feeder_distance, water_distance, water_flow, created_at) VALUES ('".$sph."','".$stemps."','".$stempd."','".$stempt."','".$sfd."','".$swd."','".$swf."','".$dt."')";
         echo $this->execute_query($sql_query);
     }
 
@@ -150,3 +148,13 @@ class Config_Nodemcu
         }
     }
 }
+
+// private function open_connection()
+// {
+//     $servername = "localhost";
+//     $username = "u1595604_laravel";
+//     $password = "C0delyoko.";
+//     $dbname = "u1595604_laravel";
+//     $conn = new mysqli($servername, $username, $password, $dbname) or die("Failed connect: %s\n" . $conn->error);
+//     return $conn;
+// }
