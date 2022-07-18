@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChartController;
+use Kyslik\ColumnSortable\SortableLink;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,12 +36,12 @@ Route::get('/table/cari','App\Http\Controllers\TableControllerAll@cari',  functi
 require __DIR__ . '/auth.php';
 
 Route::get('/table-1', 'App\Http\Controllers\TableController1@index',  function () {
-    return view('listTable');
+    return view('listTable1');
 })->middleware(['auth'])->name('listTable1');
 require __DIR__ . '/auth.php';
 
 Route::get('/table-1/cari','App\Http\Controllers\TableController1@cari',  function () {
-    return view('listTable');
+    return view('listTable1');
 })->middleware(['auth'])->name('cari');
 require __DIR__ . '/auth.php';
 

@@ -13,7 +13,7 @@ class Table extends Model
     use Sortable;
 
     public $sortable = [
-        'id', 'temp_1', 'ph_1', 'water_distance', 'water_flow',
+        'id', 'ph_1', 'temp_1', 'temp_2', 'temp_3', 'feeder_distance', 'water_distance', 'water_flow', 'created_at', 'updated_at',
         ];
 }
 

@@ -18,9 +18,10 @@ class TableController2 extends Controller
     public function index()
     {
         // mengambil data dari table pegawai
-        $table = Table::orderBy('id', 'desc')
+        $table = Table::sortable()
+        ->latest()
         // ->take(96)
-        ->sortable()->paginate(10)->onEachSide(2)->fragment('datakolam');
+        ->paginate(10)->onEachSide(2)->fragment('datakolam');
 
         // mengirim data pegawai ke view index
         return view('listTable2', ['table' => $table]);
@@ -32,9 +33,9 @@ class TableController2 extends Controller
         $cari = $request->cari;
 
         // mengambil data dari table pegawai sesuai pencarian data
-        $table = Table::orderBy('id', 'desc')
+        $table = Table::sortable()
+        ->latest()
         // ->take(96)
-        ->sortable()
             ->where('id', 'like', "%" . $cari . "%")
             ->paginate(10)->onEachSide(2)->fragment('datakolam');
 
