@@ -35,12 +35,12 @@
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('ph_1', 'pH Air ( pH)')
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    {{-- <th scope="col" class="px-6 py-3">
                                         @sortablelink('water_distance', 'Ketinggian Air ( cm)')
-                                    </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    </th> --}}
+                                    {{-- <th scope="col" class="px-6 py-3">
                                         @sortablelink('water_flow', 'Arus Air (l/min)')
-                                    </th>
+                                    </th> --}}
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('feeder_distance', 'Ketinggian Pakan ( cm)')
                                     </th>
@@ -61,8 +61,8 @@
                                         <td class="px-6 py-4"> {{ $nomor++ }} </td>
                                         <td class="px-6 py-4"> {{ $value->temp_1 }} </td>
                                         <td class="px-6 py-4"> {{ $value->ph_1 }} </td>
-                                        <td class="px-6 py-4"> {{ $value->water_distance }} </td>
-                                        <td class="px-6 py-4"> {{ $value->water_flow }} </td>
+                                        {{-- <td class="px-6 py-4"> {{ $value->water_distance }} </td> --}}
+                                        {{-- <td class="px-6 py-4"> {{ $value->water_flow }} </td> --}}
                                         <td class="px-6 py-4"> {{ $value->feeder_distance }} </td>
                                         <td class="px-6 py-4"> {{ $value->id }} </td>
                                         <td class="px-6 py-4"> {{ $value->created_at }} </td>

@@ -4,11 +4,11 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                {{-- <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600 dark:text-white" />
                     </a>
-                </div>
+                </div> --}}
 
                 <!-- Navigation Links -->
                 <div class="space-x-8 -my-px ml-6 flex">
@@ -16,16 +16,16 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTableAll')" :active="request()->routeIs('listTableAll')">
-                        {{ __('Data Semua Kolam') }}
+                        {{ __('All') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable1')" :active="request()->routeIs('listTable1')">
-                        {{ __('Data Kolam 1') }}
+                        {{ __('1') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable2')" :active="request()->routeIs('listTable2')">
-                        {{ __('Data Kolam 2') }}
+                        {{ __('2') }}
                     </x-nav-link>
                     <x-nav-link :href="route('listTable3')" :active="request()->routeIs('listTable3')">
-                        {{ __('Data Kolam 3') }}
+                        {{ __('3') }}
                     </x-nav-link>
                 </div>
 

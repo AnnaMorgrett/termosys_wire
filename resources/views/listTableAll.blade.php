@@ -41,12 +41,12 @@
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('ph_1', 'pH Kolam 1 ( pH)')
                                     </th>
-                                    <th scope="col" class="px-6 py-3">
+                                    {{-- <th scope="col" class="px-6 py-3">
                                         @sortablelink('water_distance', 'Ketinggian Air Kolam 1 ( cm)')
                                     </th>
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('water_flow', 'Arus Air Kolam 1 (l/min)')
-                                    </th>
+                                    </th> --}}
                                     <th scope="col" class="px-6 py-3">
                                         @sortablelink('feeder_distance', 'Ketinggian Pakan ( cm)')
                                     </th>
@@ -69,8 +69,8 @@
                                         <td class="px-6 py-4"> {{ $value->temp_2 }} </td>
                                         <td class="px-6 py-4"> {{ $value->temp_3 }} </td>
                                         <td class="px-6 py-4"> {{ $value->ph_1 }} </td>
-                                        <td class="px-6 py-4"> {{ $value->water_distance }} </td>
-                                        <td class="px-6 py-4"> {{ $value->water_flow }} </td>
+                                        {{-- <td class="px-6 py-4"> {{ $value->water_distance }} </td>
+                                        <td class="px-6 py-4"> {{ $value->water_flow }} </td> --}}
                                         <td class="px-6 py-4"> {{ $value->feeder_distance }} </td>
                                         <td class="px-6 py-4"> {{ $value->id }} </td>                 
                                         <td class="px-6 py-4"> {{ $value->created_at }} </td>
